@@ -1,0 +1,51 @@
+const mongoose=require('mongoose');
+
+const bookSchema=new mongoose.Schema({
+    title:{
+        type:String,
+        required:true
+    },
+    author:{
+        type:String,
+        required:true,
+    },
+    price:{
+        type:Number,
+        required:true
+    },
+    rating:{
+        type:Number,
+        required:true
+    },
+    description:{
+        type:String,
+        required:true
+    },
+    cover:{
+        type:String,
+        required:true
+    },
+    pages:{
+        type:Number,
+    },
+    votes:{
+        type:Number,
+    },
+    tags:{
+        type:Array
+    },
+    series:{
+        type:String
+    },
+    seriesIndex:{
+        type:Number
+    },
+    releaseDate:{
+        type:Date
+    },
+    isbn:{
+        type:Number
+    }
+
+})
+module.exports=mongoose.model('book',bookSchema);
